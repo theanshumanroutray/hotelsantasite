@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="stylesheet" href="booknow.css" />
+  </head>
+  <nav class="navbar">
+    <div class="logo"><h1>HOTEL SANTA</h1></div>
+    <ul class="nav-links">
+      <li class="active"><a href="index.html">HOME</a></li>
+      <li><a href="booknow.html">ROOMS</a></li>
+      <li><a href="#">GALLERY</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li class="ctn"><a href="booknow.html">BOOK NOW</a></li>
+    </ul>
+    <img src="./images/menu-btn.png" alt="" class="menu-btn" />
+  </nav>
+
+  <header>
+    <div class="header-content">
+      <h2>Book Your Slice of Paradise: Unveiling Exquisite Retreats</h2>
+      <div class="line"></div>
+      <h1>Enchanting Escapes: Book Now!</h1>
+      <a href="#" class="ctn">Learn More</a>
+    </div>
+  </header>
+  <script>
+    const menuBtn = document.querySelector(".menu-btn");
+    const navlinks = document.querySelector(".nav-links");
+    menuBtn.addEventListener("click", () => {
+      navlinks.classList.toggle("mobile-menu");
+    });
+  </script>
+
+  <body>
+    <div class="container">
+      <h2>Book Your Dream Rooms</h2>
+      <div class="line"></div>
+      <div class="form">
+        <label for="check-in">Check-in Date:</label>
+        <input type="date" id="check-in" required />
+
+        <label for="check-out">Check-out Date:</label>
+        <input type="date" id="check-out" required />
+
+        <label for="room-type">Room Type:</label>
+        <select id="room-type">
+          <option value="deluxe">Deluxe AC Room (₹500 per night)</option>
+          <option value="deluxe-large">
+            Deluxe AC Large Room (₹1300 per night)
+          </option>
+        </select>
+
+        <button onclick="calculateTotal()">Calculate Total</button>
+
+        <div id="total-price"></div>
+        <a href="booknow.html" class="ctn">Pay Now</a>
+      </div>
+    </div>
+
+    <script>
+      function calculateTotal() {
+        const roomType = document.getElementById("room-type").value;
+        const checkInDate = new Date(document.getElementById("check-in").value);
+        const checkOutDate = new Date(
+          document.getElementById("check-out").value
+        );
+
+        const oneDay = 24 * 60 * 60 * 1000; // One day in milliseconds
+        const numNights = Math.round(
+          Math.abs((checkInDate - checkOutDate) / oneDay)
+        );
+
+        let roomRate;
+        if (roomType === "deluxe") {
+          roomRate = 500;
+        } else if (roomType === "deluxe-large") {
+          roomRate = 1300;
+        } else {
+          return; // Invalid room type
+        }
+
+        const totalAmount = roomRate * numNights;
+        const gstAmount = totalAmount * 0.18; // 18% GST
+        const totalPrice = totalAmount + gstAmount;
+
+        const totalPriceElement = document.getElementById("total-price");
+        totalPriceElement.textContent = `Total Price: ₹${totalPrice.toFixed(
+          2
+        )}`;
+      }
+    </script>
+
+    <section class="footer">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quis
+        dolorem vero laboriosam autem illo eaque excepturi natus. Soluta nostrum
+        rem similique, nam voluptatum dolores!
+      </p>
+      <p>Copyright @Hotel_Santa</p>
+    </section>
+  </body>
+</html>

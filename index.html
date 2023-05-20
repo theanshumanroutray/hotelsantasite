@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hotel Santa</title>
+  </head>
+
+  <!--navbar-->
+  <nav class="navbar">
+    <div class="logo"><h1>HOTEL SANTA</h1></div>
+    <ul class="nav-links">
+      <li class="active"><a href="#">HOME</a></li>
+      <li><a href="booknow.html">ROOMS</a></li>
+      <li><a href="#">GALLERY</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li class="ctn"><a href="booknow.html">BOOK NOW</a></li>
+    </ul>
+    <img src="./images/menu-btn.png" alt="" class="menu-btn" />
+  </nav>
+  <header>
+    <div class="header-content">
+      <h2>Book Your Slice of Paradise: Unveiling Exquisite Retreats</h2>
+      <div class="line"></div>
+      <h1>Enchanting Escapes: Book Now!</h1>
+      <a href="#" class="ctn">Learn More</a>
+    </div>
+  </header>
+
+  <!-- Rooms-->
+
+  <script>
+    const menuBtn = document.querySelector(".menu-btn");
+    const navlinks = document.querySelector(".nav-links");
+    menuBtn.addEventListener("click", () => {
+      navlinks.classList.toggle("mobile-menu");
+    });
+  </script>
+  <body>
+    <section class="rooms">
+      <div class="title">
+        <h1>Our Luxurious Rooms</h1>
+        <div class="line1"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="./images/home3.jpg" alt="" class="g4" />
+          <h4>Delux AC Rooms</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Repellendus exercitationem nihil aperiam quisquam numquam quasi ad
+            laboriosam! Perferendis, modi in.
+          </p>
+          <a href="booknow.html" class="ctn">Book Now</a>
+        </div>
+        <div class="col">
+          <img src="./images/img2.jpg" alt="" class="g5" />
+          <h4>Delux AC Large Rooms</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Repellendus exercitationem nihil aperiam quisquam numquam quasi ad
+            laboriosam! Perferendis, modi in.
+          </p>
+          <a href="booknow.html" class="ctn">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="book">
+      <div class="book-content">
+        <h1>BOOK YOUR LUXURIOUS ROOM</h1>
+        <div class="line"></div>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos minima
+          sunt mollitia consequatur tempore quisquam autem. Blanditiis aperiam,
+          nemo optio temporibus iure voluptas, illo et consectetur odit minima
+          enim laborum ea fugit obcaecati sunt fuga nam! Tenetur quae
+          exercitationem unde esse sint. Placeat labore, quam
+        </p>
+        <a href="#" class="ctn">Learn More</a>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="row">
+        <div class="col-content">
+          <h1>OUTSTANDING ENVIRONMENT WTH LUXURY FACILITIES</h1>
+          <div class="line"></div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+            eligendi harum voluptates sit possimus velit similique? Pariatur
+            excepturi distinctio veniam molestias enim perspiciatis repellendus
+            obcaecati et dignissimos deleniti saepe hic perferendis aspernatur
+            nisi inventore eos optio ratione, vel officia totam consectetur
+            culpa. Nostrum nesciunt commodi, unde doloribus sunt excepturi
+            obcaecati ab non atque alias incidunt voluptates sequi, amet cum
+            ipsum expedita quos consectetur! Doloribus a nihil provident, ullam
+            impedit rem perferendis esse adipisci dolorem? Consequatur voluptas
+            eveniet corporis ducimus praesentium?
+          </p>
+          <a href="#" class="ctn">Learn More</a>
+        </div>
+        <div class="col-image">
+          <div class="image-gallery">
+            <img src="./images/img2.jpg" alt="" />
+            <img src="./images/g7.jpg" alt="" />
+            <img src="./images/g6.jpg" alt="" />
+            <img src="./images/g8.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quis
+        dolorem vero laboriosam autem illo eaque excepturi natus. Soluta nostrum
+        rem similique, nam voluptatum dolores!
+      </p>
+      <p>Copyright @Hotel_Santa</p>
+    </section>
+  </body>
+</html>
